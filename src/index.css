@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Cybersecurity Portfolio Design System
+Dark neon theme with cyberpunk aesthetics */
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    /* Cyberpunk Color Palette */
+    --background: 220 13% 3%;  /* Deep dark background */
+    --foreground: 180 100% 85%;  /* Cyan text */
+
+    --card: 220 13% 5%;  /* Slightly lighter dark */
+    --card-foreground: 180 100% 85%;
+
+    --popover: 220 13% 8%;
+    --popover-foreground: 180 100% 85%;
+
+    --primary: 180 100% 50%;  /* Electric cyan */
+    --primary-foreground: 220 13% 3%;
+
+    --secondary: 270 100% 60%;  /* Purple neon */
+    --secondary-foreground: 180 100% 85%;
+
+    --muted: 220 13% 10%;
+    --muted-foreground: 180 30% 60%;
+
+    --accent: 120 100% 50%;  /* Matrix green */
+    --accent-foreground: 220 13% 3%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 180 100% 15%;  /* Cyan border */
+    --input: 220 13% 8%;
+    --ring: 180 100% 50%;
+
+    --radius: 0.5rem;
+
+    /* Custom cyberpunk effects */
+    --neon-glow: 0 0 20px hsl(var(--primary)), 0 0 40px hsl(var(--primary)), 0 0 60px hsl(var(--primary));
+    --secondary-glow: 0 0 20px hsl(var(--secondary)), 0 0 40px hsl(var(--secondary));
+    --accent-glow: 0 0 20px hsl(var(--accent)), 0 0 40px hsl(var(--accent));
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+    --gradient-cyber: linear-gradient(45deg, hsl(var(--background)), hsl(var(--card)));
+    --gradient-terminal: linear-gradient(to bottom, hsl(var(--accent) / 0.1), transparent);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
